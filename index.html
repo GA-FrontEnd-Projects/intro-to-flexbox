@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">		
+		<link rel="stylesheet" href="css/style.css" />
+		<script
+		  src="https://code.jquery.com/jquery-1.12.4.min.js"
+		  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Introduction to Flexbox</h1>
+						<p class="lead">Flexbox is a powerful tool for achieving modern layouts in CSS. Below we will examine some of the different properties flexbox offers and how each affects flex content.</p>
+					</div>
+				</div>
+
+				<section>
+					<div class="row">
+						<div class="col-md-12">
+							<h2>flex-direction</h2>
+							<p>This property determines the order in which flex items are displayed relative to the order of the items in the markup, and whether they display inline or vertically stacked.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-9">
+							<div class="flex-container">
+								<div class="flex-item">1</div>
+								<div class="flex-item">2</div>
+								<div class="flex-item">3</div>
+								<div class="flex-item">4</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="options-container form-horizontal">
+								<h4>Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6">flex-direction: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="flex-direction">
+											<option value="row">row (default)</option>
+											<option value="row-reverse">row-reverse</option>
+											<option value="column">column</option>
+											<option value="column-reverse">column-reverse</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-6">justify-content: </label>
+									<div class="col-md-6">
+										<span>
+										flex-start
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="row">
+						<div class="col-md-12">
+							<h2>justify-content</h2>
+							<p>This property determines where, relative to the flex container, the content is aligned. <code>flex-start</code> and <code>flex-end</code> depend on the direction set in <code>flex-direction</code>. <code>space-between</code> positions the first and last elements at the beginning and end of the container, respectively, and puts equal space between each of the elements. <code>space-around</code> gives equal space between elements, and the first and last elements have half the space before and after (respectively) as between elements. Note that items in contexts with <code>flex-direction: column*</code> are not affected by this property unless the flex container has a defined height.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-9">
+							<div class="flex-container">
+								<div class="flex-item">1</div>
+								<div class="flex-item">2</div>
+								<div class="flex-item">3</div>
+								<div class="flex-item">4</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="options-container form-horizontal">
+								<h4>Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6">flex-direction: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="flex-direction">
+											<option value="row">row (default)</option>
+											<option value="row-reverse">row-reverse</option>
+											<option value="column">column</option>
+											<option value="column-reverse">column-reverse</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-6">justify-content: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="justify-content">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="space-between">space-between</option>
+											<option value="space-around">space-around</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

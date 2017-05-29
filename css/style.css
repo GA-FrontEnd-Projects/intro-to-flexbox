@@ -1,0 +1,24 @@
+h3 {
+	margin-top: 0;
+}
+section .row:not(:last-child) {
+	margin-bottom: 15px;
+}
+.flex-container {
+	display: flex;
+	border: 1px dashed #ccc;
+	padding: 10px;
+}
+.flex-container .flex-item {
+	border: 1px solid #ccc;
+	padding: 20px;
+	font-size: 3rem;
+}
+.options-container {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.options-container label, .options-container span {
+	line-height: 34px;
+	margin-bottom: 0;
+}
