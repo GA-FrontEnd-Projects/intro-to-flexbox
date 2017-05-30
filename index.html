@@ -25,11 +25,11 @@
 					<div class="row">
 						<div class="col-md-12">
 							<h2>flex-direction</h2>
-							<p>This property determines the order in which flex items are displayed relative to the order of the items in the markup, and whether they display inline or vertically stacked.</p>
+							<p>This property determines the order in which flex items are displayed relative to the order of the items in the markup, and whether they display inline or vertically stacked. This is also called the "main axis".</p>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-9">
+						<div class="col-md-8">
 							<div class="flex-container">
 								<div class="flex-item">1</div>
 								<div class="flex-item">2</div>
@@ -37,11 +37,11 @@
 								<div class="flex-item">4</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<div class="options-container form-horizontal">
 								<h4>Properties</h4>
 								<div class="form-group">
-									<label class="col-md-6">flex-direction: </label>
+									<label class="col-md-6 new">flex-direction: </label>
 									<div class="col-md-6">
 										<select class="form-control" data-applies-to="container" data-property="flex-direction">
 											<option value="row">row (default)</option>
@@ -68,11 +68,11 @@
 					<div class="row">
 						<div class="col-md-12">
 							<h2>justify-content</h2>
-							<p>This property determines where, relative to the flex container, the content is aligned. <code>flex-start</code> and <code>flex-end</code> depend on the direction set in <code>flex-direction</code>. <code>space-between</code> positions the first and last elements at the beginning and end of the container, respectively, and puts equal space between each of the elements. <code>space-around</code> gives equal space between elements, and the first and last elements have half the space before and after (respectively) as between elements. Note that items in contexts with <code>flex-direction: column*</code> are not affected by this property unless the flex container has a defined height.</p>
+							<p>This property determines where, relative to the flex container, the content is aligned along the main axis. Values of <code>flex-start</code> and <code>flex-end</code> depend on the direction set in <code>flex-direction</code>. <code>space-between</code> positions the first and last elements at the beginning and end of the container, respectively, and puts equal space between each of the elements. <code>space-around</code> gives equal space between elements, and the first and last elements have half the space before and after (respectively) as between elements. Note that items in contexts with <code>flex-direction: column*</code> are not affected by this property unless the flex container has a defined height.</p>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-9">
+						<div class="col-md-8">
 							<div class="flex-container">
 								<div class="flex-item">1</div>
 								<div class="flex-item">2</div>
@@ -80,7 +80,55 @@
 								<div class="flex-item">4</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4">
+							<div class="options-container form-horizontal">
+								<h4>Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6">flex-direction: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="flex-direction">
+											<option value="row">row (default)</option>
+											<option value="row-reverse">row-reverse</option>
+											<option value="column">column</option>
+											<option value="column-reverse">column-reverse</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-6 new">justify-content: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="justify-content">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="space-between">space-between</option>
+											<option value="space-around">space-around</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="flex-wrap">
+					<div class="row">
+						<div class="col-md-12">
+							<h2>flex-wrap</h2>
+							<p>This property determines whether flex items can exist in multiple lines or whether they can only take up one line. Whether "line" means "row" or "column", and where the line originates and overflows depends on <code>flex-direction</code> and width or height settings of the container.</p>
+							<p>You can also use <code>flex-flow</code> as a shorthand property for <code>flex-direction</code> and <code>flex-wrap</code> like this: <code>flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;</code>. How this affects in which direction lines of items stack, which is called the "cross axis"</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="flex-container">
+								<div class="flex-item">1</div>
+								<div class="flex-item">2</div>
+								<div class="flex-item">3</div>
+								<div class="flex-item">4</div>
+							</div>
+						</div>
+						<div class="col-md-4">
 							<div class="options-container form-horizontal">
 								<h4>Properties</h4>
 								<div class="form-group">
@@ -106,10 +154,385 @@
 										</select>
 									</div>
 								</div>
+								<div class="form-group">
+									<label class="col-md-6 new">flex-wrap: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="flex-wrap">
+											<option value="nowrap">nowrap (default)</option>
+											<option value="wrap">wrap</option>
+											<option value="wrap-reverse">wrap-reverse</option>
+										</select>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
+
+				<section id="flex-wrap">
+					<div class="row">
+						<div class="col-md-12">
+							<h2>order</h2>
+							<p>This property applies to individual flex items and determines the order within the given flex container.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="flex-container">
+								<div class="flex-item">1</div>
+								<div class="flex-item">2</div>
+								<div class="flex-item">3</div>
+								<div class="flex-item">4</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="options-container form-horizontal">
+								<h4>Container Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6">flex-direction: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="flex-direction">
+											<option value="row">row (default)</option>
+											<option value="row-reverse">row-reverse</option>
+											<option value="column">column</option>
+											<option value="column-reverse">column-reverse</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-6">justify-content: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="justify-content">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="space-between">space-between</option>
+											<option value="space-around">space-around</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-6">flex-wrap: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="flex-wrap">
+											<option value="nowrap">nowrap (default)</option>
+											<option value="wrap">wrap</option>
+											<option value="wrap-reverse">wrap-reverse</option>
+										</select>
+									</div>
+								</div>
+
+								<h4>Item Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6 new">Item #1 order: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(1)" data-property="order">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="-1">-1</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-6 new">Item #2 order: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(2)" data-property="order">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="-1">-1</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-6 new">Item #3 order: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(3)" data-property="order">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="-1">-1</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-6 new">Item #4 order: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(4)" data-property="order">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="-1">-1</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="align">
+					<div class="row">
+						<div class="col-md-12">
+							<h2>align-items and align-self</h2>
+							<p><code>align-items</code> applies to the flex container and determines the default cross-axis alignment for flex items. <code>align-self</code> applies to individual flex items and determines that specific item's cross-axis alignment.</p>
+							<p>"baseline" aligns the items along the baseline of the text inside the items, putting the tallest item along the beginning of the cross axis and aligning everything else to it.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="flex-container">
+								<div class="flex-item">1</div>
+								<div class="flex-item">2</div>
+								<div class="flex-item">3</div>
+								<div class="flex-item">4</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="options-container form-horizontal">
+								<h4>Container Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6 new">align-items: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="align-items">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="baseline">baseline</option>
+											<option value="stretch">stretch</option>
+										</select>
+									</div>
+								</div>
+
+								<h4>Item Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6 new">Item #1 align-self: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(1)" data-property="align-self">
+											<option value="auto">auto</option>
+											<option value="flex-start">flex-start</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="baseline">baseline</option>
+											<option value="stretch">stretch</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #1 height: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(1)" data-property="height">
+											<option value="25%" selected="selected">25% (default)</option>
+											<option value="50%">50% </option>
+											<option value="75%">75%</option>
+											<option value="90%">90%</option>
+											<option value="auto">auto</option>
+										</select>
+									</div>
+								</div>
+								<hr />
+								<div class="form-group">
+									<label class="col-md-6 new">Item #2 align-self: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(2)" data-property="align-self">
+											<option value="auto">auto</option>
+											<option value="flex-start">flex-start</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="baseline">baseline</option>
+											<option value="stretch">stretch</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #2 height: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(2)" data-property="height">
+											<option value="25%">25%</option>
+											<option value="50%" selected="selected">50% (default)</option>
+											<option value="75%">75%</option>
+											<option value="90%">90%</option>
+											<option value="auto">auto</option>
+										</select>
+									</div>
+								</div>
+								<hr />
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #3 align-self: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(3)" data-property="align-self">
+											<option value="auto">auto</option>
+											<option value="flex-start">flex-start</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="baseline">baseline</option>
+											<option value="stretch">stretch</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #3 height: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(3)" data-property="height">
+											<option value="25%">25%</option>
+											<option value="50%">50%</option>
+											<option value="75%" selected="selected">75% (default)</option>
+											<option value="90%">90%</option>
+											<option value="auto">auto</option>
+										</select>
+									</div>
+								</div>
+								<hr />
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #4 align-self: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(4)" data-property="align-self">
+											<option value="auto">auto</option>
+											<option value="flex-start">flex-start</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="baseline">baseline</option>
+											<option value="stretch">stretch</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #4 height: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(4)" data-property="height">
+											<option value="25%">25%</option>
+											<option value="50%">50% </option>
+											<option value="75%">75%</option>
+											<option value="90%" selected="selected">90% (default)</option>
+											<option value="auto">auto</option>
+										</select>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<div class="row">
+						<div class="col-md-12">
+							<h2>Horizontally positioning text content</h2>
+							<p>Sometimes you will want to position text horizontally. You don't have fine-grained control over horizontal positioning of text through flexbox, but you can center it horizontally, or start the text from the left or right of the container. Use the container's <code>justify-content</code> property to change the horizontal origin of the text.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="flex-container" contenteditable="true">This is my text content</div>
+						</div>
+						<div class="col-md-4">
+							<div class="options-container form-horizontal">
+								<h4>Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6">justify-content: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="justify-content">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="space-between">space-between</option>
+											<option value="space-around">space-around</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="vertically-centered">
+					<div class="row">
+						<div class="col-md-12">
+							<h2>Vertically positioning text content</h2>
+							<p>Sometimes you will want to position text vertically. You don't have fine-grained control over vertical positioning of text through flexbox, but you can center it vertically, or start the text from the bottom or top of the container. Use the container's <code>align-items</code> property to change the vertical origin of the text.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="flex-container" contenteditable="true">This is my text content</div>
+						</div>
+						<div class="col-md-4">
+							<div class="options-container form-horizontal">
+								<h4>Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6">align-items: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="align-items">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="baseline">baseline</option>
+											<option value="stretch">stretch</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="vertically-and-horizontally-centered">
+					<div class="row">
+						<div class="col-md-12">
+							<h2>Horizontally and vertically positioning text content</h2>
+							<p>Combine the two above properties to gain more control over text placement inside a flex container.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="flex-container" contenteditable="true">This is my text content</div>
+						</div>
+						<div class="col-md-4">
+							<div class="options-container form-horizontal">
+								<h4>Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6">align-items: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="align-items">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="baseline">baseline</option>
+											<option value="stretch">stretch</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6">justify-content: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="justify-content">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="space-between">space-between</option>
+											<option value="space-around">space-around</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
 			</div>
 		</div>
 	</body>

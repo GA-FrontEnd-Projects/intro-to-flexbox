@@ -1,9 +1,21 @@
+#wrapper {
+	margin-bottom: 100px;
+}
 h3 {
 	margin-top: 0;
+} 
+section {
+	margin-bottom: 20px;
 }
 section .row:not(:last-child) {
 	margin-bottom: 15px;
 }
+
+.new {
+	color: blue;
+}
+
+
 .flex-container {
 	display: flex;
 	border: 1px dashed #ccc;
@@ -13,6 +25,9 @@ section .row:not(:last-child) {
 	border: 1px solid #ccc;
 	padding: 20px;
 	font-size: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .options-container {
 	border: 1px solid #ccc;
@@ -21,4 +36,24 @@ section .row:not(:last-child) {
 .options-container label, .options-container span {
 	line-height: 34px;
 	margin-bottom: 0;
+}
+
+#flex-wrap .flex-item {
+	width: 50%;
+}
+
+#align .flex-container, #vertically-centered .flex-container, #vertically-and-horizontally-centered .flex-container {
+	height: 200px;
+}
+#align .flex-item:nth-child(1) {
+	height: 25%;
+}
+#align .flex-item:nth-child(2) {
+	height: 50%;
+}
+#align .flex-item:nth-child(3) {
+	height: 75%;
+}
+#align .flex-item:nth-child(4) {
+	height: 90%;
 }
