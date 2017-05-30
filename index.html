@@ -39,7 +39,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="options-container form-horizontal">
-								<h4>Properties</h4>
+								<h4>Container Properties</h4>
 								<div class="form-group">
 									<label class="col-md-6 new">flex-direction: </label>
 									<div class="col-md-6">
@@ -82,7 +82,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="options-container form-horizontal">
-								<h4>Properties</h4>
+								<h4>Container Properties</h4>
 								<div class="form-group">
 									<label class="col-md-6">flex-direction: </label>
 									<div class="col-md-6">
@@ -130,7 +130,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="options-container form-horizontal">
-								<h4>Properties</h4>
+								<h4>Container Properties</h4>
 								<div class="form-group">
 									<label class="col-md-6">flex-direction: </label>
 									<div class="col-md-6">
@@ -426,6 +426,179 @@
 				</section>
 
 
+				<section id="flex">
+					<div class="row">
+						<div class="col-md-12">
+							<h2>flex-basis, flex-grow, and flex-shrink</h2>
+							<p><code>flex-basis</code> is a property that determine's an item's defualt size before available space is distributed. It can be set the same way <code>height</code> or <code>width</code> can.<code>flex-grow</code> and <code>flex-shrink</code> are properties that take positive integer arguments that determine how space is distributed if any positive or negative space remains. Using the <code>flex</code> shorthand property, which combines all three properties into one shorthand property, is preferred over setting each individually.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="flex-container">
+								<div class="flex-item">1</div>
+								<div class="flex-item">2</div>
+								<div class="flex-item">3</div>
+								<div class="flex-item">4</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="options-container form-horizontal">
+								<h4>Container Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6 new">justify-content: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="justify-content">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="space-around">space-around</option>
+											<option value="space-between">space-between</option>
+										</select>
+									</div>
+								</div>
+
+								<h4>Item Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6 new">Item #1 flex-basis: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(1)" data-property="flex-basis">
+											<option value="auto">auto (default)</option>
+											<option value="100px">100px</option>
+											<option value="200px">200px</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #1 flex-shrink: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(1)" data-property="flex-shrink">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #1 flex-grow: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(1)" data-property="flex-grow">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+										</select>
+									</div>
+								</div>
+								<hr />
+								<div class="form-group">
+									<label class="col-md-6 new">Item #2 flex-basis: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(2)" data-property="flex-basis">
+											<option value="auto">auto (default)</option>
+											<option value="100px">100px</option>
+											<option value="200px">200px</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #2 flex-shrink: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(2)" data-property="flex-shrink">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #2 flex-grow: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(2)" data-property="flex-grow">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+										</select>
+									</div>
+								</div>
+								<hr />
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #3 flex-basis: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(3)" data-property="flex-basis">
+											<option value="auto">auto (default)</option>
+											<option value="100px">100px</option>
+											<option value="200px">200px</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #3 flex-shrink: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(3)" data-property="flex-shrink">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #3 flex-grow: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(3)" data-property="flex-grow">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+										</select>
+									</div>
+								</div>
+								<hr />
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #4 flex-basis: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(4)" data-property="flex-basis">
+											<option value="auto">auto (default)</option>
+											<option value="100px">100px</option>
+											<option value="200px">200px</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #4 flex-shrink: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(4)" data-property="flex-shrink">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-6 new">Item #4 flex-grow: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="item:nth-child(4)" data-property="flex-grow">
+											<option value="0">0 (default)</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+										</select>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+
 				<section>
 					<div class="row">
 						<div class="col-md-12">
@@ -439,7 +612,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="options-container form-horizontal">
-								<h4>Properties</h4>
+								<h4>Container Properties</h4>
 								<div class="form-group">
 									<label class="col-md-6">justify-content: </label>
 									<div class="col-md-6">
@@ -470,7 +643,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="options-container form-horizontal">
-								<h4>Properties</h4>
+								<h4>Container Properties</h4>
 								<div class="form-group">
 									<label class="col-md-6">align-items: </label>
 									<div class="col-md-6">
@@ -501,7 +674,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="options-container form-horizontal">
-								<h4>Properties</h4>
+								<h4>Container Properties</h4>
 								<div class="form-group">
 									<label class="col-md-6">align-items: </label>
 									<div class="col-md-6">
@@ -532,6 +705,38 @@
 					</div>
 				</section>
 
+
+
+				<section>
+					<div class="row">
+						<div class="col-md-12">
+							<h2>Horizontally positioning text content</h2>
+							<p>Sometimes you will want to position text horizontally. You don't have fine-grained control over horizontal positioning of text through flexbox, but you can center it horizontally, or start the text from the left or right of the container. Use the container's <code>justify-content</code> property to change the horizontal origin of the text.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="flex-container" contenteditable="true">This is my text content</div>
+						</div>
+						<div class="col-md-4">
+							<div class="options-container form-horizontal">
+								<h4>Container Properties</h4>
+								<div class="form-group">
+									<label class="col-md-6">justify-content: </label>
+									<div class="col-md-6">
+										<select class="form-control" data-applies-to="container" data-property="justify-content">
+											<option value="flex-start">flex-start (default)</option>
+											<option value="flex-end">flex-end</option>
+											<option value="center">center</option>
+											<option value="space-between">space-between</option>
+											<option value="space-around">space-around</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
 			</div>
 		</div>
